@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lista de usuarios</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<style>
+
+img {
+  border-radius: 50%;
+}
+
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.letters{
+font-size:20px;
+}
+
+ul:hover {
+    cursor: pointer;
+}
+
+li:hover {
+    background-color:#e1fae8;
+}
+
+.imageProfile {
+  border-radius: 50%;
+}
+
+</style>
+
+<script>
+$(document).on('ready',function(){       
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/controlpanel")
+    });
+
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-sm-12 top-bar"><div style="float:right; color:gray; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Admin<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
+<div class="col-md-3"  > <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
+
+<div class="col-md-6">
+</br></br>
+<h2>Lista de usuarios</h2>
+<hr>
+<div class="list-group">
+    <a href="profile" class="list-group-item list-group-item-action">Paredan99 <span class="imageProfile" style="float:right;" ><img style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></a>
+	
+	<a href="profile" class="list-group-item list-group-item-action">GwenStefaniFan99 <span class="imageProfile" style="float:right;" ><img style="height:70px; width:70px;" id="blah" src="media/gwen.jpg" alt="Aquí aparecerá tu imagen"></img></span></a>
+	
+	<a href="profile" class="list-group-item list-group-item-action">OzzyFan39 <span class="imageProfile" style="float:right;" ><img style="height:70px; width:70px;" id="blah" src="media/ozzy.jpg" alt="Aquí aparecerá tu imagen"></img></span></a>
+	
+	<a href="profile" class="list-group-item list-group-item-action">MuseFan99 <span class="imageProfile" style="float:right;" ><img style="height:70px; width:70px;" id="blah" src="media/muse.jpg" alt="Aquí aparecerá tu imagen"></img></span></a>
+	
+	<a href="profile" class="list-group-item list-group-item-action">KingCrimsonFan99 <span class="imageProfile" style="float:right;" ><img style="height:70px; width:70px;" id="blah" src="media/kingcrimson.jpg" alt="Aquí aparecerá tu imagen"></img></span></a>
+	
+</div>
+<div class="col-md-6"></div>
+<div class="col-md-12" ></br></br></br></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</body>
+</html>

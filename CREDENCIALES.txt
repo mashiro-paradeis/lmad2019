@@ -1,0 +1,9 @@
+Primero hay que entrar a proyecto lmad/login.html
+
+Para entrar a las pantallas de usuario ->
+user: paredan99
+pass: doginthepwo
+
+Para entrar a las pantallas de admin ->
+user: admin
+pass: admin

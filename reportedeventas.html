@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.letters{
+font-size:20px;
+}
+
+ul:hover {
+    cursor: pointer;
+}
+
+li:hover {
+    background-color:#e1fae8;
+}
+
+.imageProfile {
+  border-radius: 50%;
+}
+
+</style>
+
+<script>
+$(document).on('ready',function(){       
+
+    $('#table_id').DataTable();
+	
+	$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/controlpanel")
+    });
+
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-sm-12 top-bar"><div style="float:right; color:gray; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Admin<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
+
+<div class="col-md-3"  > <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
+
+<div class="col-md-6">
+</br></br>
+<h2>Reporte de ventas</h2>
+<hr>
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Información de ventas</th>
+            <th>Información de producto</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+	<a href="#">10107314284</a>
+	<p style="color:#51406A" >Pedido enviado</p> 
+	<p>Realizado :<span style="font-weight:70">10-10-2010</span></p> 
+	<p>Método de envío :<span style="font-weight:70">Fedex</span></p> 
+	<p>Total :<span style="font-weight:70">$300</span></p> 
+	</td>
+                <td>
+	<ul>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+
+	</ul>
+	</td>
+        </tr>
+        <tr>
+            <td>
+	<a href="#">10107314284</a>
+	<p style="color:#51406A" >Pedido enviado</p> 
+	<p>Realizado :<span style="font-weight:70">20-11-2010</span></p> 
+	<p>Método de envío :<span style="font-weight:70">Fedex</span></p> 
+	<p>Total :<span style="font-weight:70">$100</span></p> 
+	</td>
+            <td>
+	<ul>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+
+	</ul>
+	</td>
+        </tr>
+		        <tr>
+            <td>
+	<a href="#">10107314284</a>
+	<p style="color:#51406A" >Pedido enviado</p> 
+	<p>Realizado :<span style="font-weight:70">20-11-2010</span></p> 
+	<p>Método de envío :<span style="font-weight:70">Fedex</span></p> 
+	<p>Total :<span style="font-weight:70">$100</span></p> 
+	</td>
+            <td>
+	<ul>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+<li class="list-group-item">
+<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+<span><a href="product" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>		
+</br>
+</li>
+
+	</ul>
+	</td>
+        </tr>
+    </tbody>
+</table> 
+</div>
+<div class="col-md-6"></div>
+<div class="col-md-12" ></br></br></br></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</body>
+</html>

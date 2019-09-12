@@ -29,6 +29,9 @@ img {
   border-radius: 50%;
 }
 
+.imageProfile {
+  border-radius: 50%;
+}
 </style>
 
 <script>
@@ -50,6 +53,10 @@ function readURL(input) {
         }
 		
 $(document).on('ready',function(){  
+
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/index")
+    });
 
 $('#aceptar').click(function(){
 location.replace("http://localhost/proyecto%20lmad/index")
@@ -86,7 +93,7 @@ $(".custom-file-input").on("change", function(){
 
 <div class="col-md-12"  > </br> </div>
 
-<div class="col-md-3"  > </br> </div>
+<div class="col-md-3"  >  <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
 
 <div class="col-md-6"> 
 <div class="card bg-light text-dark">

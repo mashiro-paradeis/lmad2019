@@ -3,7 +3,10 @@
     $contrasena  = $_POST['contrasena'];
 	
 	if($usuario == "admin" && $contrasena == "admin"){
-		echo "dekimashita";
+		echo "admin";
+	}
+	else if($usuario == "paredan99" && $contrasena == "doginthepwo"){
+		echo "user";
 	}
 	else
 	{

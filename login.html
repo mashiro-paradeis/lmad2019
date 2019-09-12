@@ -18,6 +18,9 @@ h3 {
   font-family: Impact, Charcoal, sans-serif;
 }
 
+.imageProfile {
+  border-radius: 50%;
+}
 </style>
 
 <script>
@@ -30,8 +33,11 @@ $(document).on('ready',function(){
            data: $("#formulario").serialize(), 
            success: function(data)             
            {
-		    if(data == "dekimashita"){
+		    if(data == "user"){
              location.replace("http://localhost/proyecto%20lmad/index.html")
+                }    
+			else if(data == "admin"){
+             location.replace("http://localhost/proyecto%20lmad/controlpanel.html")
                 }    
             else $("#wrong").show("slow");		
            }
@@ -49,7 +55,7 @@ $(document).on('ready',function(){
 
 <div class="col-md-12"  > </br> </div>
 
-<div class="col-md-3"  > </br> </div>
+<div class="col-md-3"  >  <span style="float:left;"><img class="product carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
 <div class="col-md-3"  > 
 <h3> Inicie sesión en Muse Bazar</h3>
 <h4> Si aún no está registrado, cree una cuenta, es gratis. </h4>
@@ -59,7 +65,9 @@ $(document).on('ready',function(){
 <li> Podrá realizar reseñas de los productos que compre </li>
 <li> ¡Y más! </li>
 </ul>
-<button type="button" class="btn btn-primary"> Cree una cuenta </button>
+<form action="register" method="post">
+<button type="submit" class="btn btn-primary"> Cree una cuenta </button>
+</form>
 </br>
 </div>
 <div class="col-md-3"  > 

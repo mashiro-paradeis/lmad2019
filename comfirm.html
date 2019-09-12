@@ -21,10 +21,20 @@ h3 {
 .letters{
 font-size:20px;
 }
+.imageProfile {
+  border-radius: 50%;
+}
 </style>
 
 <script>
-$(document).on('ready',function(){       
+$(document).on('ready',function(){   
+
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/index")
+    });  
+
+$('[data-toggle="tooltip"]').tooltip(); 
+  
     $('#btn-ingresar').click(function(){
         var url = "login.php";
         $.ajax({                        
@@ -52,7 +62,11 @@ $(document).on('ready',function(){
 
 <div class="col-md-12"  > </br> </div>
 
-<div class="col-md-3"  > </br> </div>
+
+<div class="col-sm-12 top-bar"><div style="float:right; color:white; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Paredan99<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
+
+<div class="col-md-3"  >  <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
 <div class="col-md-6">
 <h3>Resumen del pedido</h3>
 <hr></br>
@@ -72,7 +86,7 @@ $(document).on('ready',function(){
     <tbody>
       <tr>
         <td >
-		<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+		<span style="float:left;"><img class="menu-sender carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
 		<span><a href="#" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>
 		</td>
         <td>1 pz</td>

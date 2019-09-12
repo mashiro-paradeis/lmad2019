@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.letters{
+font-size:20px;
+}
+
+ul:hover {
+    cursor: pointer;
+}
+
+li:hover {
+    background-color:#e1fae8;
+}
+
+.imageProfile {
+  border-radius: 50%;
+}
+
+</style>
+
+<script>
+$(document).on('ready',function(){       
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/controlpanel")
+    });
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-sm-12 top-bar"><div style="float:right; color:gray; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Admin<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
+
+<div class="col-md-3"  > <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
+
+<div class="col-md-6">
+</br></br>
+<h2>Panel de control</h2>
+<hr>
+<ul class="list-group">
+
+    <a href="reportedeventas.html" >
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Reporte de ventas
+    </li>
+	</a>
+	
+	<a href="solicitudesdepresupuesto.html" >
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Solicitudes de presupuesto
+      <span class="badge badge-primary badge-pill">Total: 10</span>
+    </li>
+	</a>
+	
+	<a href="listaarticulos.html" >
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      Artículos
+      <span class="badge badge-primary badge-pill">Total: 50</span>
+    </li>
+	</a>
+	
+	<a href="listausuarios.html" >
+	<li class="list-group-item d-flex justify-content-between align-items-center">
+      Usuarios
+      <span class="badge badge-primary badge-pill">Total: 30</span>
+    </li>
+	</a>
+	
+  </ul>
+</div>
+<div class="col-md-6"></div>
+<div class="col-md-12" ></br></br></br></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.letters{
+font-size:20px;
+}
+
+table:hover {
+    cursor: pointer;
+}
+
+td:hover {
+    background-color:#e1fae8;
+}
+
+.imageProfile {
+  border-radius: 50%;
+}
+
+</style>
+
+<script>
+$(document).on('ready',function(){  
+
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/controlpanel")
+    });     
+
+    $('#table_id').DataTable();
+
+$('th').click(function(){
+location.replace("http://localhost/proyecto%20lmad/product")
+});
+$('td').click(function(){
+location.replace("http://localhost/proyecto%20lmad/product")
+});
+	
+	
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-sm-12 top-bar"><div style="float:right; color:gray; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Admin<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
+
+<div class="col-md-3"  > <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span> </div>
+
+<div class="col-md-6">
+</br></br>
+<h2>Lista de artículos</h2>
+<hr>
+<table id="table_id" class="display">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Artista</th>
+			<th>Fecha de salida</th>
+			<th>Disponibilidad</th>
+			<th>Valoración</th>
+			<th>Tipo de archivo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+		<tr>
+            <td>DAOKO x Dragalia Lost [Limited Edition]</td>
+			<td>DAOKO</td>
+			<td>2019-10-09</td>
+			<td>4</td>
+			<td>★★★★★</td>
+			<td>CD</td>
+        </tr>
+</tbody>
+</table> 
+</div>
+<div class="col-md-6"></div>
+<div class="col-md-12" ></br></br></br></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</body>
+</html>

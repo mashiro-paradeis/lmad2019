@@ -15,6 +15,14 @@
  <script>
 $(document).ready(function(){
 
+$('[data-toggle="tooltip"]').tooltip(); 
+
+$('.menu-sender').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/index")
+    });
+	
+	
+
 //////////////  Top Menú  ///////////////
 $('.responsive').mouseenter(function () {
     $(this).css({border: '0 solid #addbe0'}).animate({
@@ -124,6 +132,9 @@ border-bottom-color: gray;
   color: white;
 }
 
+.imageProfile {
+  border-radius: 50%;
+}
 </style>
 
 </head>
@@ -132,18 +143,19 @@ border-bottom-color: gray;
 <!-- ROW -->
 <div class="row">
 <!-- TOP BAR -->
-<div class="col-sm-12 top-bar"></br></div>
+<div class="col-sm-12 top-bar"><div style="float:right; color:white; font-wight:70; font-size:25px; vertical-align:center; " >Bienvenido, Paredan99<span class="imageProfile" style="float:right;" ><img class="imageProfile" style="height:70px; width:70px;" id="blah" src="media/mashiro.jpg" alt="Aquí aparecerá tu imagen"></img></span></br><a href="login" style="float:right; font-weight:70; font-size:20px;" >Cerrar sesión</a></div></div>
+
 <!-- PRIMERA FILA -->
 <div class="col-sm-1"></div>
 <!-- LOGO -->
-<div class="col-sm-2" style="background-color:white;"> Logo</div>
-<!-- ACCOUNT -->
+<div class="col-sm-2" style="background-color:white;"> <span style="float:left;"><img class="menu-sender carousel-pic" src="logo.png" alt="Los Angeles" style="height:100%; width:100%; " ></span>
+</div><!-- ACCOUNT -->
 <div id="myTopnav" class="col-sm-6 topnav" style="background-color:white;">
-<a href="#home" ><img class="responsive" src="media/carrito.jpg"></img></a>
-<a href="#carrito" ><img class="responsive" src="media/carrito.jpg"></img></a>
-<a href="#marcadores" ><img class="responsive" src="media/carrito.jpg"></img></a>
-<a href="#favoritos" ><img class="responsive" src="media/carrito.jpg"></img></a>
-<a href="#departamentos" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="profile" data-toggle="tooltip" title="Mi perfil" ><img class="responsive" src="media/profile.png" ></img></a>
+<a href="cart" data-toggle="tooltip" title="Cesta" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#marcadores" data-toggle="tooltip" title="Marcadores" ><img class="responsive" src="media/bookmark.png"></img></a>
+<a href="#favoritos" data-toggle="tooltip" title="Favoritos" ><img class="responsive" src="media/star.png"></img></a>
+<a href="#departamentos" data-toggle="tooltip" title="Departamentos" ><img class="responsive" src="media/compact-disc.png"></img></a>
 </div>
 <!-- SEARCH BAR-->
 <div class="col-sm-2" style="background-color:white;">
@@ -224,11 +236,11 @@ border-bottom-color: gray;
 </br>
 <div class="card" style="border-color:white;" >
 <div class="card-header" style="background-color:#e1fae8; color:gray;" >
-Sponsored Content<span class="glyphicon glyphicon-music" style="color:white;" ></span>
+DATOS<span class="glyphicon glyphicon-music" style="color:white;" ></span>
 </div>
 <div class="card-body">
-<h4 class="card-title">Ugg Boots</h4>
-<p class="card-text">Best ugg boots on the planet. Free shipping, 24/7 customer service.</p>
+<h4 class="card-title">DATOS</h4>
+<p class="card-text">DATOS</p>
 </div>
 </div>
 </div>
@@ -236,7 +248,7 @@ Sponsored Content<span class="glyphicon glyphicon-music" style="color:white;" ><
 <div class="col-sm-1"></div>
 <div class="col-sm-12" style="background-color:white;"> 
 <hr style="border:solid; ">
-I want to die </br></br></br></br></br></br></div>
+DATOS </br></br></br></br></br></br></div>
 <div class="col-sm-12" style="background-color:gray;"> Information </br></br></div>
 
 
