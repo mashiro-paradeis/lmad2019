@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Muse Bazar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+ 
+ <script>
+$(document).ready(function(){
+
+//////////////  Top Menú  ///////////////
+$('.responsive').mouseenter(function () {
+    $(this).css({border: '0 solid #addbe0'}).animate({
+        borderBottomWidth: 4
+    }, 50);
+}).mouseleave(function () {
+     $(this).animate({
+        borderBottomWidth: 0
+    }, 50);
+});
+
+//////////////  Top Menú  ///////////////
+
+});
+
+</script>
+ 
+<style>
+
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.list-group-item{
+padding:5px;
+}
+
+.carousel-pic{
+padding: 10px 10px 10px 10px ;
+}
+
+.maru{
+ border-radius: 50%;
+}
+
+td{
+text-align:center;
+background-color:white;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  border: solid;
+  border-color: gray;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+.responsive{
+  width: auto;
+  height: 55px;
+  border-radius:15%;
+}
+
+.top-bar{ 
+background-color:#51406A;
+} 
+
+.acc-opt{ 
+height:50px;
+wheight:50px;
+} 
+
+.vl{
+  border-left: 6px solid green;
+  height: 50px;
+}
+
+.topnav a{
+  float: left;
+  text-align: center;
+  padding: 10px 40px 1px 10px;
+  text-decoration: none;
+  font-size: 17px; 
+  border-bottom-color: gray;
+}
+
+/*
+.topnav a:hover {
+border-bottom-style: solid;
+border-bottom-color: gray;
+}*/
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container-fluid">
+<!-- ROW -->
+<div class="row">
+<!-- TOP BAR -->
+<div class="col-sm-12 top-bar"></br></div>
+<!-- PRIMERA FILA -->
+<div class="col-sm-1"></div>
+<!-- LOGO -->
+<div class="col-sm-2" style="background-color:white;"> Logo</div>
+<!-- ACCOUNT -->
+<div id="myTopnav" class="col-sm-6 topnav" style="background-color:white;">
+<a href="profile" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="cart" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#marcadores" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#favoritos" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#departamentos" ><img class="responsive" src="media/carrito.jpg"></img></a>
+</div>
+<!-- SEARCH BAR-->
+<div class="col-sm-2" style="background-color:white;">
+
+</div>
+
+<div class="col-sm-1"></div>
+
+
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2" style="background-color:white;">
+</div>
+
+<div class="col-sm-6" style="background-color:white;">
+<hr>
+<div class="row">
+<div class="col-sm-6" style="background-color:white;">
+<div class="form-group">
+      <label for="sel1">Seleccione el tipo de producto:</label>
+      <select class="form-control" id="sel1">
+        <option>Todos</option>
+        <option>CD</option>
+        <option>DVD</option>
+        <option>Libros</option>
+      </select>
+      <br>
+	  <label for="searcher">Buscar por:</label>
+      <select class="form-control" id="searcher">
+        <option>Todos</option>
+        <option>Artista</option>
+        <option>Título</option>
+      </select>
+	  <br>
+	  <label for="sorter">Ordenar por:</label>
+      <select class="form-control" id="sorter">
+        <option>Relevancia</option>
+        <option>Los más baratos</option>
+        <option>Los más caros</option>
+		<option>Los más viejos</option>
+		<option>Los más nuevos</option>
+      </select>
+    </div>
+	</div>
+<div class="col-sm-6" style="background-color:white;">
+<form class="form-inline" action="/action_page.php">
+<div class="form-group">
+</br>
+<label for="tag">Introduce un término:</label>
+<input type="text" class="form-control" id="tag">
+</div>
+<button type="button" style= "border-radius:50%; background-color:#e1fae8; border-color:white; border-style:solid;" class="btn btn-default">&#43;</button>
+</form> 
+ <div class="form-group">
+  <label for="comment">Etiquetas de búsqueda:</label>
+  <textarea class="form-control" rows="5" id="comment"></textarea>
+</div> 
+</div>
+
+<div class="col-sm-12" style="background-color:white; text-align:center;">
+<button type="button" class="btn btn-success" style="background-color:#e1fae8; border-color:white; color:#51406A;">Buscar</button>
+</div>
+
+
+</div>
+</div>
+<div class="col-sm-2" style="background-color:white;">
+</br>
+<div class="card" style="border-color:white;" >
+<div class="card-header" style="background-color:#e1fae8; color:white;" >
+Sponsored Content<span class="glyphicon glyphicon-music" style="color:white;" ></span>
+</div>
+<div class="card-body">
+<h4 class="card-title">Ugg Boots</h4>
+<p class="card-text">Best ugg boots on the planet. Free shipping, 24/7 customer service.</p>
+</div>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-12" style="background-color:white;"> 
+<hr style="border:solid; ">
+I want to die </br></br></br></br></br></br></div>
+<div class="col-sm-12" style="background-color:gray;"> Information </br></br></div>
+
+
+</div>
+<!-- BODY -->
+</div>
+    
+</body>
+</html>

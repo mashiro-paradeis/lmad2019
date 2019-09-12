@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+</style>
+
+<script>
+$(document).on('ready',function(){       
+    $('#btn-ingresar').click(function(){
+        var url = "login.php";
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                     
+           data: $("#formulario").serialize(), 
+           success: function(data)             
+           {
+		    if(data == "dekimashita"){
+             location.replace("http://localhost/proyecto%20lmad/index.html")
+                }    
+            else $("#wrong").show("slow");		
+           }
+       });
+    });
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-12"  > </br> </div>
+
+<div class="col-md-3"  > </br> </div>
+<div class="col-md-3"  > 
+<h3> Inicie sesión en Muse Bazar</h3>
+<h4> Si aún no está registrado, cree una cuenta, es gratis. </h4>
+<ul>
+<li> Podrá regatear directamente con el comprador </li>
+<li> Recibirá notificaciones de ofertas </li>
+<li> Podrá realizar reseñas de los productos que compre </li>
+<li> ¡Y más! </li>
+</ul>
+<button type="button" class="btn btn-primary"> Cree una cuenta </button>
+</br>
+</div>
+<div class="col-md-3"  > 
+<h3>Inicie sesion</h3>
+<div class="card bg-secondary text-white"  style="background-color:#e1fae8; border:solid; border-radius:3%; border-color:gray;" >
+    <div class="card-body" style="background-color:#e1fae8; border:solid; border-radius:3%; border-color:gray;">
+
+<form method="post" id="formulario">
+<div class="form-group">
+<label for="usr" style="color:gray;" >Nombre:</label>
+<input type="text" name="usuario" class="form-control" id="usr" placeholder="Usuario" autofocus/>
+</div>
+<div class="form-group">
+<label for="pwd" style="color:gray;">Contraseña:</label>
+<input type="password" name="contrasena" placeholder="Contraseña"/ class="form-control" id="pwd">
+</div> 
+<a href="forgottenpass.html">¿Ha olvidado su contraseña?</a>
+<input type="button" value="Ingresar" id="btn-ingresar" class="btn btn-primary" style="background-color:#51406A" ></input>
+</form>
+<p id="wrong" style="color:red; display: none;" >Usuario o contraseña incorrecta</p></br>
+</div>
+</div>
+</div>
+<div class="col-md-3" ></br></div>
+<div class="col-md-12" ></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</div>
+</div>
+
+</body>
+</html>

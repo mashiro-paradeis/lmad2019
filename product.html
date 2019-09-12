@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Muse Bazar</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+ 
+ <script>
+ 
+$(document).ready(function(){
+
+//////////////  Top Menú  ///////////////
+$('.responsive').mouseenter(function () {
+    $(this).css({border: '0 solid #addbe0'}).animate({
+        borderBottomWidth: 4
+    }, 50);
+}).mouseleave(function () {
+     $(this).animate({
+        borderBottomWidth: 0
+    }, 50);
+});
+    $('.product').click(function(){
+    location.replace("http://localhost/proyecto%20lmad/product")
+    });
+
+//////////////  Top Menú  ///////////////
+
+});
+
+</script>
+ 
+<style>
+
+li {
+  display: list-item;
+  list-style-position: inside;
+}
+
+
+.product:hover {
+    cursor: pointer;
+	border-style:solid;
+	border-color:gray;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.list-group-item{
+padding:5px;
+}
+
+.carousel-pic{
+padding: 10px 10px 10px 10px ;
+}
+
+.maru{
+ border-radius: 50%;
+}
+
+td{
+text-align:center;
+background-color:white;
+}
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+
+input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 12px;
+  border: solid;
+  border-color: gray;
+}
+
+.search-container button {
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background: #ccc;
+}
+
+.responsive{
+  width: auto;
+  height: 55px;
+  border-radius:15%;
+}
+
+.top-bar{ 
+background-color:#51406A;
+} 
+
+.acc-opt{ 
+height:50px;
+wheight:50px;
+} 
+
+.vl{
+  border-left: 6px solid green;
+  height: 50px;
+}
+
+.topnav a{
+  float: left;
+  text-align: center;
+  padding: 10px 40px 1px 10px;
+  text-decoration: none;
+  font-size: 17px; 
+  border-bottom-color: gray;
+}
+
+/*
+.topnav a:hover {
+border-bottom-style: solid;
+border-bottom-color: gray;
+}*/
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+</style>
+
+</head>
+<body>
+<div class="container-fluid">
+<!-- ROW -->
+<div class="row">
+<!-- TOP BAR -->
+<div class="col-sm-12 top-bar"></br></div>
+<!-- PRIMERA FILA -->
+<div class="col-sm-1"></div>
+<!-- LOGO -->
+<div class="col-sm-2" style="background-color:white;"> Logo</div>
+<!-- ACCOUNT -->
+<div id="myTopnav" class="col-sm-6 topnav" style="background-color:white;">
+<a href="profile" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="cart" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#marcadores" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#favoritos" ><img class="responsive" src="media/carrito.jpg"></img></a>
+<a href="#departamentos" ><img class="responsive" src="media/carrito.jpg"></img></a>
+</div>
+<!-- SEARCH BAR-->
+<div class="col-sm-2" style="background-color:white;">
+</br>
+<div class="search-container">
+<form name="searchForm"  method="post" action="http://localhost/proyecto%20lmad/search.html">
+<input type="text" placeholder="Search.." name="search">
+<button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+</div>
+
+<div class="col-sm-1"></div>
+
+<div class="col-sm-1"></div>
+<div class="col-sm-2" style="background-color:white;">
+</br>
+
+<div class="card" style="border-color:white;" >
+<div class="card-header" style="background-color:#51406A; color:white; " >
+Géneros<i class="fas fa-music" style="float:right; color:white;"></i>
+</div>
+<div class="card-body">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Pop</li>
+	<li class="list-group-item">Rock</li>
+	<li class="list-group-item">Country</li>
+	<li class="list-group-item">Hip-hop</li>
+	<li class="list-group-item">R&B </li>
+	<li class="list-group-item">Jazz</li>
+	<li class="list-group-item">Punk</li>
+	<li class="list-group-item">Metal</li>
+	<li class="list-group-item">Electronic</li>
+	<li class="list-group-item">Blues</li>
+	<li class="list-group-item">Lo-fi</li>
+	<li class="list-group-item">Reggae </li>
+  </ul>
+</div>
+</div>
+
+</br>
+
+<div class="card" style="border-color:white;" >
+<div class="card-header" style="background-color:#51406A; color:white;" >
+Sponsored Content
+</div>
+<div class="card-body">
+<h4 class="card-title">Ugg Boots</h4>
+<p class="card-text">Best ugg boots on the planet. Free shipping, 24/7 customer service.</p>
+</div>
+</div>
+
+</div>
+<div class="col-sm-6" style="background-color:white;">
+<hr style="border: solid;" >
+
+    <div class="card-body row">
+	
+	<div class="col-md-6">
+    <img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100%; width:100%; " >
+	</div>
+	
+	<div class="col-md-6">
+	<p style="font-size:25px; font-weight:200;">DAOKO x Dragalia Lost [Limited Edition]</p>
+	<a style="font-size:20px;" href="lmao.php" >DAOKO</a> 
+	</br></br>
+	<p style="font-size:15px; font-weight:200;" >Fecha de lanzamiento: <span> 2019-10-09 </span> </p>
+	<p style="font-size:15px; font-weight:200;" >Disponibilidad en stock: <span> 4 </span> </p>
+	<p style="font-size:15px; font-weight:200;" >Valoración: <span> ★★★★★ </span> </p>
+	</br>
+	<button type="button" style="background-color:#e1fae8; border-color:#e1fae8; color:gray;" class="btn btn-primary btn-block">SOLICITAR PRESUPUESTO</button> 
+	</div>
+	
+	<div class="col-md-2">
+	<img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100%; width:100%; " >
+	</div>
+	<div class="col-md-2">
+	<img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100%; width:100%; " >
+	</div>
+	<div class="col-md-2">
+	<img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100%; width:100%; " >
+	</div>
+	
+	<div class="col-md-6" >
+	</div>
+	
+	<div class="col-md-12"  >
+	<p style="font-size:25px; font-weight:500;" > Vídeo:</p>
+	
+	<div align="center">
+	<iframe style="border-color:white; border-style:solid;" width="720" height="480" src="https://www.youtube.com/embed/tvwc7KT-I3U"></iframe>
+	</div>
+	
+	</div>
+	
+	</br></br>
+	<p style="font-size:25px; font-weight:500;" > Descripción:</p>
+	<div class="card bg-light text-dark">
+    <div class="card-body">
+	<!--DESCRIPCION PRODUCTO-->
+	<article>Action RPG app "Dragalia Lost" co-developed by Nintendo and Cygames, celebrates their one year anniversary with an album collaborating with DAOKO. Album features the game's main theme song produced by Takeshi Kobayashi, "Owaranai Sekaide" and insert track produced by Yasutaka Nakata "Bokura no Network", collaboration with SCHA DARA PARR, "HiSense Paisen" with 18 tracks in total. Comes with a 24-page booklet.</article> 
+	<!--DESCRIPCION PRODUCTO-->
+	</div>
+    </div>
+	<div class="col-md-6" >
+	</br></br>
+	<p style="font-size:25px; font-weight:500;" > Tracklist:</p>
+	<ol type="1" class="list-group list-group-flush">
+    <li class="list-group-item">(タイトル未定) </li>
+	<li class="list-group-item"> 終わらない世界で </li>
+	<li class="list-group-item"> ShibuyaK (Instrumental)  </li>
+	<li class="list-group-item"> 流星都市  </li>
+	<li class="list-group-item"> ぼくらのネットワーク / DAOKO×中田ヤスタカ </li>
+	<li class="list-group-item"> BANG!  </li>
+	<li class="list-group-item"> Cinderella Step  </li>
+	<li class="list-group-item"> もしも僕らがGAMEの主役で (Instrumental)  </li>
+	<li class="list-group-item"> キボウノヲト ～Zodiark Battle Remix～  </li>
+	<li class="list-group-item"> CRASHER  </li>
+	<li class="list-group-item"> ゆめうつつ  </li>
+	<li class="list-group-item"> ShibuyaK (Live Instrumental)   </li>
+	<li class="list-group-item"> おにさんこちら  </li>
+	<li class="list-group-item"> DRIVE   </li>
+	<li class="list-group-item"> 明けたら    </li>
+	<li class="list-group-item"> 24h (feat. 神山羊)    </li>
+	<li class="list-group-item"> ファイアーエムブレムメインテーマ (Ver. Heroes) / DAOKO×スチャダラパー   </li>
+    </ol> 
+	</div>
+	
+	
+	</div>
+
+</div>
+
+<div class="col-sm-2" style="background-color:white;">
+</br>
+<div class="card" style="border-color:white;" >
+<div class="card-header" style="background-color:#e1fae8; color:white;" >
+Sponsored Content<span class="glyphicon glyphicon-music" style="color:white;" ></span>
+</div>
+<div class="card-body">
+<h4 class="card-title">Ugg Boots</h4>
+<p class="card-text">Best ugg boots on the planet. Free shipping, 24/7 customer service.</p>
+</div>
+</div>
+</div>
+<div class="col-sm-12" style="background-color:white;"> 
+<hr style="border:solid; ">
+I want to die </br></br></br></br></br></br></div>
+<div class="col-sm-12" style="background-color:gray;"> Information </br></br></div>
+
+
+</div>
+<!-- BODY -->
+</div>
+    
+</body>
+</html>

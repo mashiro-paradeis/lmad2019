@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 1px solid black;
+}
+
+img {
+  border-radius: 50%;
+}
+
+</style>
+
+<script>
+
+
+function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result)
+                        .width(250)
+                        .height(250);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+		
+$(document).on('ready',function(){  
+
+$('#aceptar').click(function(){
+location.replace("http://localhost/proyecto%20lmad/index")
+});
+
+$(".custom-file-input").on("change", function(){
+  var fileName = $(this).val().split("\\").pop();
+  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
+});
+
+    $('#btn-ingresar').click(function(){
+        var url = "login.php";
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                     
+           data: $("#formulario").serialize(), 
+           success: function(data)             
+           {
+		    if(data == "dekimashita"){
+             location.replace("http://localhost/proyecto%20lmad/index.html")
+                }    
+            else $("#wrong").show("slow");		
+           }
+       });
+    });
+});
+</script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-12"  > </br> </div>
+
+<div class="col-md-3"  > </br> </div>
+
+<div class="col-md-6"> 
+<div class="card bg-light text-dark">
+<div class="card-body">
+
+<div class = "row" >
+<div class="col-md-12"> 
+<div align="center" ><h3>Ingresa tu información</h1></div></br>
+<p style="font-weight:70; font-size:20px;">Nombre:<span><input type="text" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;">Apellido:<span><input type="text" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;">Correo:<span><input type="mail" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;">Nombre de usuario:<span><input type="text" name="nombre" ></input></span></p>
+<div class="card bg-secondary text-white"><div class="card-body">Contraseña de mínimo 8 caracteres, una mayúscula, una minúscula y un número.</div></div>
+</div>
+
+<div class="col-md-6">
+<p style="font-weight:70; font-size:20px;">Contraseña:<span><input type="text" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;">Confirmar contraseña:<span><input type="text" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;"><span style="font-weight:70; color:gray;" >(Opcional)</span>Teléfono:<span><input type="text" name="nombre" ></input></span></p>
+<p style="font-weight:70; font-size:20px;"><span style="font-weight:70; color:gray;">(Opcional)</span>Dirección:<span><input type="text" name="nombre" ></input></span></p>
+</br>
+<label>Selecciona una foto de perfil: </label> 
+  <div class="custom-file">
+    <input onchange="readURL(this);" type="file" class="custom-file-input" id="customFile">
+    <label class="custom-file-label" for="customFile">Selecciona tu foto</label>
+  </div>
+</div>
+
+<div class="col-md-6">
+</br></br>
+<div class="imageProfile" align="center" >
+<img style="height:100; width:100;" id="blah" src="#" alt="Aquí aparecerá tu imagen" />
+</div>
+</div>
+
+<div class="col-md-12">
+</br>
+<button type="button" id="aceptar" class="btn btn-primary btn-block">ACEPTAR</button> 
+</div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="col-md-3" ></br></div>
+<div class="col-md-12" ></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</div>
+</div>
+
+</body>
+</html>

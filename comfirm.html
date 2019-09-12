@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Inicia sesión</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+
+<style>
+h3 {
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+.letters{
+font-size:20px;
+}
+</style>
+
+<script>
+$(document).on('ready',function(){       
+    $('#btn-ingresar').click(function(){
+        var url = "login.php";
+        $.ajax({                        
+           type: "POST",                 
+           url: url,                     
+           data: $("#formulario").serialize(), 
+           success: function(data)             
+           {
+		    if(data == "dekimashita"){
+             location.replace("http://localhost/proyecto%20lmad/index.html")
+                }    
+            else $("#wrong").show("slow");		
+           }
+       });
+    });
+});
+</script>
+
+
+</head>
+<body>
+
+<div class="container-fluid">
+<div class="row">
+
+<div class="col-md-12"  > </br> </div>
+
+<div class="col-md-3"  > </br> </div>
+<div class="col-md-6">
+<h3>Resumen del pedido</h3>
+<hr></br>
+<p class="letters" >Nombre: <span class="letters" style="font-weight:70"> Jaziel Gerardo Juárez Medina</span></p>
+<p class="letters" >Correo: <span class="letters" style="font-weight:70"> jazieljuarezlmad39@gmail.com</span></p>
+<p class="letters" >Cupón: <span class="letters" style="font-weight:70"> No</span><span style="float:right"><button type="button" class="btn btn-sm btn-outline-secondary">Ingresar cupón</button><span></p>
+<p class="letters" >Puntos: <span class="letters" style="font-weight:70"> 300pt</span></p>
+
+ <table class="table" >
+    <thead class="thead-dark">
+      <tr>
+        <th>Detalle del producto</th>
+        <th>Cantidad</th>
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td >
+		<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+		<span><a href="#" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>
+		</td>
+        <td>1 pz</td>
+        <td style="color:gray;" >$100.00</td>
+      </tr>
+      <tr>
+        <td >
+		<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+		<span><a href="#" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>
+		</td>
+        <td>  2 pz</td>
+        <td  style="color:gray;">$200.00</td>
+      </tr>
+      <tr>
+        <td >
+		<span style="float:left;"><img class="product carousel-pic" src="http://st.cdjapan.co.jp/pictures/l/01/08/TFCC-86694.jpg?v=1" alt="Los Angeles" style="height:100px; width:100px; " ></span>
+		<span><a href="#" >[CD] DAOKO / DAOKO x Dragalia Lost [Limited Edition]</a></span></br><span>Fecha de lanzamiento: 2019-10-09  </span></br><span>Disponibilidad en stock: 4 </span></br>
+		</td>
+        <td>1 pz</td>
+        <td style="color:gray;" >$100.00</td>
+      </tr>
+	  <tr>
+        <td></td>
+        <td>Subtotal</td>
+        <td style="color:blue;" >$400.00</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="card bg-light text-dark">
+  <div class="card-body">
+  <div id="Opciones" class="row">
+  
+  <div class="col-md-6">
+  <label for="sel1">Método de pago</label><hr>
+      <select class="form-control" id="sel1">
+        <option>Tarjeta de crédito</option>
+        <option>Tarjeta de crédito</option>
+        <option>Paypal</option>
+      </select>
+  </div>
+  
+  <div class="col-md-6">
+  <label for="sel1">Método de envío</label><hr>
+      <select class="form-control" id="sel1">
+        <option>EMS</option>
+        <option>Fedex</option>
+        <option>Airmail</option>
+      </select>
+  </div>
+  
+   <div class="col-md-12"></br></br></br></div>
+   
+ <div class="col-md-6">
+  <p for="sel1">Dirección de envío</p><hr>
+<pre>
+Jaziel Gerardo Juarez medina
+Umbria #520
+Pesqueria
+Nuevo Leon
+66670
+MEXICO
+</pre>
+<button type="button" style="background-color:#e1fae8; color:gray; border-color:white;"  class="btn btn-primary">Cambiar</button>
+  </div>
+  
+  <div class="col-md-6">
+  <label for="sel1">Especificación de paquete</label><hr>
+      <select class="form-control" id="sel1">
+        <option>Un solo paquete</option>
+        <option>Dividir paquetes</option>
+      </select>
+  </div>
+  
+  </div>
+  </div>
+  </div>
+  
+   <button style="background-color:#51406A; border-color:white;" type="button" class="btn btn-primary btn-block">Proceder</button> 
+  
+  
+  
+</div>
+<div class="col-md-3" ></br></div>
+<div class="col-md-12" ></br></div>
+<div class="col-md-12" style="background-color:#51406A"></br></div>
+
+</div>
+</div>
+
+</body>
+</html>
